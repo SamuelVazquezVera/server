@@ -7,7 +7,7 @@ import {
 
 const router = express.Router();
 
-router.get("/privadas",  getPrivadas);
+router.get("/privadas", authMiddleware, getPrivadas);
 router.get("/privadaseguridad", authMiddleware, getPrivadaseguridad);
 
 export default router;
